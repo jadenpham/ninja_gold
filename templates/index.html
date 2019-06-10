@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    .body form{
+        display: inline-block;
+        width: 250px;
+        text-align: center;
+    }
+    .header form{
+        text-align: center;
+    }
+
+</style>
+<body>
+    <form class="header" action="/reset" method="POST">
+        <table>
+            <h1>Total Gold: {{gold}}</h1>
+            <input type="submit" value ="Restart Game">
+        </table>
+    </form>  
+    <div class="body">  
+        <form action="/process_money" method="POST">
+            <table>
+                <input type="hidden" name="building" value="farm">
+                <tr>
+                    <td>
+                        <h1>Farm</h1>
+                    </td>
+                <tr>   
+                    <td>
+                        <h3>Earn 10-20 gold here!</h3>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>
+                        <input type="submit" value="Find Gold">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form action="/process_money" method="POST">    
+            <table>
+                <input type="hidden" name="building" value="cave">
+                <tr>
+                    <td>
+                        <h1>Cave</h1>
+                    </td>
+                <tr>   
+                    <td>
+                        <h3>Earn 5-10 gold here!</h3>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>
+                        <input type="submit" value="Find Gold">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form action="/process_money" method="POST">    
+            <table>
+                <input type="hidden" name="building" value="house">
+                <tr>
+                    <td>
+                        <h1>House</h1>
+                    </td>
+                <tr>   
+                    <td>
+                        <h3>Earn 2-5 gold here!</h3>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>
+                        <input type="submit" value="Find Gold">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form action="/process_money" method="POST">    
+            <table>
+                <input type="hidden" name="building" value="casino">
+                <tr>
+                    <td>
+                        <h1>Casino</h1>
+                    </td>
+                <tr>   
+                    <td>
+                        <h3>Earn or Lose 0-50 gold here!</h3>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>
+                        <input type="submit" value="Find Gold">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>    
+    <h1>Activites:{{activities}}</h1>    
+</body>
+</html>
